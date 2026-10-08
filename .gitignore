@@ -1,0 +1,15 @@
+node_modules/
+dist/
+coverage/
+*.log
+
+# Generated test artifacts
+generated/
+doctypes/
+frappe_doctypes/
+docs/
+types/
+
+# Local config & environment
+.env
+pg-sync.config.json

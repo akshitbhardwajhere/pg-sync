@@ -80,12 +80,13 @@ Example configuration:
 
 ```json
 {
-  "connectionString": "postgresql://postgres:postgres@localhost:5432/mydb",
   "schema": "public",
   "target": "typescript",
   "outputDir": "./src/types"
 }
 ```
+
+Set the connection string in `.env` as `DATABASE_URL=postgresql://user:password@localhost:5432/mydb`.
 
 ### 2. Generate files
 
@@ -97,8 +98,7 @@ Command-line options override values from the config file:
 
 ```bash
 # TypeScript definitions
-pgs generate -u "postgresql://user:pass@localhost:5432/mydb" \
-  -t typescript -o ./src/types
+pgs generate -t typescript -o ./src/types
 
 # Frappe DocTypes
 pgs generate -t frappe -o ./doctypes
@@ -115,7 +115,7 @@ Create `pg-sync.config.json` in the project root, or pass a custom file with `-c
 
 | Property           | Type     | Default          | Description                      |
 | ------------------ | -------- | ---------------- | -------------------------------- |
-| `connectionString` | `string` | Required         | PostgreSQL connection URI        |
+| `connectionString` | `string` | `DATABASE_URL`   | Optional config override         |
 | `schema`           | `string` | `public`         | PostgreSQL schema to inspect     |
 | `target`           | `string` | `typescript`     | `typescript`, `frappe`, or `erd` |
 | `outputDir`        | `string` | Target-dependent | Directory for generated files    |

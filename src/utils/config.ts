@@ -2,7 +2,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 export interface PgSyncConfig {
-  connectionString: string;
+  connectionString?: string;
   schema: string;
   outputDir: string;
   target?: "typescript" | "frappe" | "erd";

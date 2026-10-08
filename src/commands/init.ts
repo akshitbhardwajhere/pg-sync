@@ -9,7 +9,7 @@ export async function runInit(): Promise<void> {
 
   const connectionString = await input({
     message: "Enter PostgreSQL connection string:",
-    default: "postgresql://postgres:admin@localhost:5432/postgres",
+    default: process.env.DATABASE_URL,
     validate: (val) =>
       val.startsWith("postgresql://") || val.startsWith("postgres://")
         ? true

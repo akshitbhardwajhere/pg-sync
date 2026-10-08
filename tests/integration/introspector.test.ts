@@ -1,16 +1,17 @@
+import "dotenv/config";
 import { describe, it, beforeAll, afterAll, expect } from "vitest";
 import { Pool } from "pg";
 import { introspectDatabase } from "../../src/engine/introspector.js";
 
-const TEST_DB_URL =
-  process.env.TEST_DATABASE_URL ||
-  process.env.DATABASE_URL ||
-  "postgresql://postgres:admin@localhost:5432/postgres";
+const TEST_DB_URL = process.env.TEST_DATABASE_URL || process.env.DATABASE_URL;
 
 describe("Introspection Engine (Integration)", () => {
   let pool: Pool;
 
   beforeAll(async () => {
+    if (!TEST_DB_URL) {
+      throw new Error("DATABASE_URL or TEST_DATABASE_URL must be set");
+    }
     pool = new Pool({ connectionString: TEST_DB_URL });
 
     // Seed test fixture schema

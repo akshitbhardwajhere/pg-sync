@@ -3,7 +3,7 @@
 > PostgreSQL schema introspection that turns your database into useful code and documentation.
 
 <p align="left">
-  <a href="https://www.npmjs.com/package/pg-sync"><img src="https://img.shields.io/npm/v/pg-sync?color=cb3837&logo=npm" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/@akshythere/pg-sync"><img src="https://img.shields.io/npm/v/@akshythere/pg-sync?color=cb3837&logo=npm" alt="npm version"></a>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.0%2B-3178C6?logo=typescript&logoColor=white" alt="TypeScript 5.0+"></a>
   <a href="https://www.postgresql.org/"><img src="https://img.shields.io/badge/PostgreSQL-12%2B-336791?logo=postgresql&logoColor=white" alt="PostgreSQL 12+"></a>
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-yellow.svg" alt="MIT license"></a>
@@ -50,7 +50,7 @@ flowchart LR
 ### Use globally
 
 ```bash
-npm install -g pg-sync
+npm install -g @akshythere/pg-sync
 pgs --help
 ```
 

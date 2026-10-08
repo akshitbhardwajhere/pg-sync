@@ -1,5 +1,5 @@
 {
-  "name": "pg-sync",
+  "name": "@akshythere/pg-sync",
   "version": "1.0.0",
   "description": "PostgreSQL Schema Introspector",
   "main": "dist/index.js",
@@ -11,6 +11,9 @@
     "dist",
     "README.md"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc && chmod +x dist/index.js",
     "start": "node dist/index.js",

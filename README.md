@@ -74,6 +74,8 @@ The wizard asks for your connection details, verifies the database connection, a
 pgs init
 ```
 
+Choose TypeScript interfaces, Frappe DocTypes, or Mermaid ERD documentation. The wizard defaults to `./src/types`, `./doctypes`, or `./docs` respectively.
+
 Example configuration:
 
 ```json
@@ -121,7 +123,7 @@ Create `pg-sync.config.json` in the project root, or pass a custom file with `-c
 Useful flags:
 
 ```text
--u, --url <url>       PostgreSQL connection string
+-u, --url <url>      PostgreSQL connection string
 -s, --schema <name>  Database schema to inspect
 -o, --output <dir>   Output directory
 -t, --target <type>  typescript | frappe | erd
